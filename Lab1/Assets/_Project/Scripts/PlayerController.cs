@@ -4,7 +4,7 @@ namespace Platformer397
 {
     [RequireComponent(typeof(Rigidbody))]
 
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : Subject
     {
         [SerializeField] private InputReader input;
         [SerializeField] private Rigidbody rb;
@@ -12,7 +12,7 @@ namespace Platformer397
 
         [SerializeField] private float moveSpeed = 200f;
         [SerializeField] private float rotationSpeed = 200f;
-        [SerializeField] private float jumpForce = 500f;
+        //[SerializeField] private float jumpForce = 500f;
 
         [SerializeField] private Transform mainCam;
 
@@ -26,6 +26,7 @@ namespace Platformer397
         private void Start()
         {
             input.EnablePlayerActions();
+            NotifyObservers();
         }
 
         private void OnEnable()
