@@ -18,8 +18,8 @@ namespace Platformer397
             }
             // player ??= GameObject.FindWithTag("Player").transform;
 
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            //Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.visible = false;
         }
         
         // On Enable, I want to associate the transform of our player into the target of your cinemachine camera
